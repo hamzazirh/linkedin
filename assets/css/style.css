@@ -1,4 +1,32 @@
+:root {--mavi:#0275B1; --siyah:#181818;}
 body {font-family: 'Gotham Pro', sans-serif;background:#F7F9FB;}
+a{text-decoration: none;}
 .container {max-width: 1200px;padding: 0  10px;}
 .container-fluid {max-width: 1360px;padding: 0 10px;}
-header {padding: 17px 0; background: #fff;}
+i.ikon{display: inline-block;}
+i.ikon::before{content: "";display: block;width: 1em;height: 1em;background-repeat: no-repeat!important;background-size: contain!important;}
+.ikon.kullanici::before{background: url("../ikon/users.svg");}
+.ikon.arama::before{background: url("../ikon/search.svg");}
+.ikon.rss::before{background: url("../ikon/rss.svg");}
+.ikon.ok-yukari-sag::before{background: url("../ikon/arrow-up-right.svg");}
+.ikon.zil::before{background: url("../ikon/bell.svg");}
+.ikon.is::before{background: url("../ikon/briefcase.svg");}
+.ikon.duzenle::before{background: url("../ikon/edit.svg");}
+.ikon.mesaj::before{background: url("../ikon/message-square.svg");}
+.ikon.yatay-nokta::before{background: url("../ikon/more-horizontal.svg");}
+.ikon.dikey-nokta::before{background: url("../ikon/more-horizontal-2.svg");}
+.ikon.oynat::before{background: url("../ikon/play.svg");}
+.ikon.konum::before{background: url("../ikon/Location.svg");}
+
+header { background: #fff;}
+header .container-fluid {display: flex;flex-wrap: wrap;}
+header .logo{padding: 17px 0;}
+header nav ul {display: flex;flex-wrap: wrap;gap: 20px;margin: 0;}
+header nav ul li{display: block;list-style: none;}
+header nav ul li a{display: block;padding: 17px 10px;position: relative; border-bottom: 2px solid transparent; text-align: center;font-weight: 400;color:var(--siyah) ;transition: 0.3s ease all;}
+header nav ul li i.ikon{display: block;font-size: 24px;width: max-content;margin: auto;filter: brightness(0);transition: 0.3s ease all;}
+header nav ul li sup {position: absolute;font-style: normal;}
+header nav ul li span{font-size: 12px;}
+header nav ul li ul{display: none;}
+header nav ul li:hover a{color:var(--mavi) ;border-bottom: 2px solid ; transition: 0.3s ease all;}
+header nav ul li:hover i.ikon{filter: unset; transition: 0.3s ease all;}
