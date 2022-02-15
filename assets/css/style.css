@@ -1,1 +1,4 @@
-body {font-family: 'Gotham Pro', sans-serif;}
+body {font-family: 'Gotham Pro', sans-serif;background:#F7F9FB;}
+.container {max-width: 1200px;padding: 0  10px;}
+.container-fluid {max-width: 1360px;padding: 0 10px;}
+header {padding: 17px 0; background: #fff;}
