@@ -2,7 +2,7 @@
 body {font-family: 'Gotham Pro', sans-serif;background:#F7F9FB;}
 a{text-decoration: none;}
 .container {max-width: 1200px;padding: 0  10px;}
-.container-fluid {max-width: 1360px;padding: 0 10px;}
+.container-fluid {max-width: 1420px;padding: 0 10px;}
 i.ikon{display: inline-block;}
 i.ikon::before{content: "";display: block;width: 1em;height: 1em;background-repeat: no-repeat!important;background-size: contain!important;}
 .ikon.kullanici::before{background: url("../ikon/users.svg");}
@@ -20,17 +20,21 @@ i.ikon::before{content: "";display: block;width: 1em;height: 1em;background-repe
 
 header { background: #fff;position: sticky;top: 0;z-index: 2;}
 header .container-fluid {display: flex;flex-wrap: wrap;align-items: center;justify-content: center;gap: 0 20px;}
-header .logo{padding: 15px 20px 14px 4px;}
+header .logo{padding: 15px 20px 14px 24px;}
 header nav { border-left:1px solid #F4F4F4;border-right:1px solid #F4F4F4;}
-header nav ul {display: flex;flex-wrap: wrap;gap: 0 25px;margin: 0;padding: 0 25px;}
-header nav ul li{display: block;list-style: none;}
-header nav ul li a{display: block;padding: 15px 10px;position: relative; border-bottom: 2px solid transparent; text-align: center;font-weight: 600;color:var(--siyah) ;transition: 0.3s ease all;}
+header nav > ul {display: flex;flex-wrap: wrap;gap: 0 25px;margin: 0;padding: 0 25px;}
+header nav > ul > li{display: block;list-style: none;position: relative;}
+header nav > ul > li > a{display: block;padding: 15px 10px;position: relative; border-bottom: 2px solid transparent; text-align: center;font-weight: 600;color:var(--siyah) ;transition: 0.3s ease all;}
 header nav ul li i.ikon{display: block;font-size: 24px;width: max-content;margin: auto;filter: brightness(0);transition: 0.3s ease all;}
 header nav ul li sup {position: absolute;z-index: 2;width: 16px;height: 16px;font-size: 10px;background: rgb(255,183,94);background: linear-gradient(0deg, rgb(255, 183, 94) 0%, rgb(237, 143, 3) 100%);border-radius: 50%;color: #fff;display: flex; align-items: center;justify-content: center;right: 10px;top: 10px;}
 header nav ul li span{font-size: 12px;}
 header nav ul li ul{display: none;}
-header nav ul li:hover a{color:var(--mavi) ;border-bottom: 2px solid ; transition: 0.3s ease all;}
-header nav ul li:hover i.ikon{filter: unset; transition: 0.3s ease all;}
+header nav ul li ul li{display: block;list-style: none;}
+header nav ul li ul li a{display: block;padding: 10px;font-size: 15px;color: var(--siyah);border-bottom: 1px solid #E7E7E7;}
+header nav > ul > li:hover > a{color:var(--mavi) ;border-bottom: 2px solid ; transition: 0.3s ease all;}
+header nav > ul > li:hover i.ikon{filter: unset; transition: 0.3s ease all;}
+header nav ul li:hover ul{display: block;position: absolute;margin: 0;padding: 10px;background: #fff;min-width: 250px;left: -15px; }
+header nav ul li ul li:hover a{color: var(--mavi);border-bottom: 1px solid var(--mavi);}
 
 header .ara {display: flex;align-items: center;padding: 0 10px;flex: 4;max-width: 370px;}
 header .ara .form-group{position: relative;width: 100%;}
@@ -52,8 +56,39 @@ header .other a span{font-size: 12px;}
 header .other:hover a{color:var(--mavi) ;border-bottom: 2px solid ; transition: 0.3s ease all;}
 header .other:hover i.ikon{filter: unset; transition: 0.3s ease all;}
 
-.head {margin: 40px 0;}
-.head .kutu{display: flex;flex-wrap: wrap;gap: 40px;}
-.head .kutu .sol{flex: 8;background: #fff; }
-.head .kutu .sag{flex: 4;max-width: 290px; background: #fff;border-radius: 2px;padding: 25px 30px;}
+.anaKutu {margin: 40px 0;}
+.anaKutu .kutu{display: flex;flex-wrap: wrap;gap: 40px;}
+.anaKutu .kutu .sol{flex: 8;}
+.anaKutu .kutu .sag{flex: 4;height: max-content; max-width: 290px; background: #fff;border-radius: 2px;padding: 20px;}
+.anaKutu .kutu .sag .tab {display: flex;padding: 0 0 10px 0;font-size: 13px;justify-content: space-between;border-bottom: 1px solid #E7E7E7;margin-bottom: 15px;}
+.anaKutu .kutu .sag .tab li{display: block;list-style: none;font-weight: 600;}
+.anaKutu .kutu .sag .tab li a{color: var(--siyah);}
+.anaKutu .kutu .sag .tab li.aktif a{color: var(--mavi);}
+.anaKutu .kutu .sag .stats {margin: 0;padding: 0;}
+.anaKutu .kutu .sag .stats li {display: block;list-style: none;font-size: 14px;margin-bottom: 20px;}
+.anaKutu .kutu .sag .stats li:last-child {margin-bottom: 0;}
+.anaKutu .kutu .sag .stats li span {display: block;font-size: 52px;line-height: 52px;font-weight: 600;color: var(--mavi);}
+
+.anaKutu .bilgi {display: flex;flex-wrap: wrap;padding: 0 20px;background: #fff; margin-bottom: 20px;}
+.anaKutu .bilgi .resim{border-radius: 50%;overflow: hidden;margin-top: -30px;background: #fff;height: max-content;}
+.anaKutu .bilgi .ozet{flex: 9;padding: 20px;}
+.anaKutu .bilgi .ozet .kisi{display: flex;justify-content: space-between;margin-bottom: 15px;}
+.anaKutu .bilgi .ozet .kisi h1{font-size: 18px;margin: 0;font-weight: 600;}
+.anaKutu .bilgi .ozet .kisi .lokasyon {font-size: 14px;}
+.anaKutu .bilgi .ozet .bio {margin-bottom: 15px;font-size: 15px;}
+.anaKutu .bilgi .ozet .butonlar ul{display: flex; gap: 10px;margin: 0;padding: 0;}
+.anaKutu .bilgi .ozet .butonlar ul li {display: block;}
+.anaKutu .bilgi .ozet .butonlar ul li .btn-info{font-size: 14px;padding: 5px 25px; background: #0077B5;border-color: #0077B5; color: #ffffff;}
+.anaKutu .bilgi .ozet .butonlar ul li .btn-light{font-size: 14px;padding: 5px 25px; background: #fff;border-color: #0275B1; color: #0275B1;}
+
+.anaKutu .tablar .nav{border-bottom: 1px solid #E7E7E7;align-items: flex-end;margin-bottom: 15px;}
+.anaKutu .tablar .nav .nav-link{font-size: 14px;padding: 8px 50px;font-weight: 600; border-radius: 0;background: #fff;color: var(--siyah);border: 1px solid #E7E7E7;border-bottom: unset;}
+.anaKutu .tablar .nav .nav-item:first-child .nav-link:not(.active){border-right: unset;border-radius: 0 0 0 4px;}
+.anaKutu .tablar .nav .nav-item:last-child .nav-link:not(.active){border-left: unset;border-radius: 0 4px 0 0;}
+.anaKutu .tablar .nav .nav-link.active{background: var(--mavi);color: #fff;border-color: var(--mavi);padding: 10px 50px;border-radius: 4px 4px 0 0;}
+
+.anaKutu .tablar .tab-content {padding: 20px;background: #fff;border-radius: 4px;}
+.anaKutu .tablar .tab-content .baslik {font-size: 18px;display: block;margin-bottom: 10px;}
+.anaKutu .tablar .tab-content .tumu {font-size: 14px;color: var(--mavi);font-weight: 600;}
+
 
